@@ -1,4 +1,29 @@
+@import "../scss/fontawesome.scss";
+@import "../scss/brands.scss";
+@import "../scss/regular.scss";
+@import "../scss/solid.scss";
+
+
 $base: rgb(255, 255, 255);
+
 body {
-    backgroun d-color: $base;
+    background-color: $base;
+}
+
+.user {
+    @extend %fa-icon;
+    @extend .fas;
+
+    &:before {
+        content: fa-content($fa-var-user);
+    }
+}
+
+.twitter {
+    @extend %fa-icon;
+    @extend .fab;
+
+    &:before {
+    content: fa-content($fa-var-twitter);
+    }
 }
